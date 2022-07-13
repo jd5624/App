@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 <script type="module"src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js">
-</script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="javascript.js" type="application/javascript"></script>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
 <ion-app>
     <ion-header>
@@ -18,21 +20,31 @@
     </ion-title>
     <ion-item>
         <ion-label>Navigation</ion-label>
-        <ion-select value="" ok-text="Okay" cancel-text="Dismiss">
-          <ion-select-option value="brown">Home <a href="Home.html"a></a></ion-select-option>
-          <ion-select-option value="blonde">About</ion-select-option>
-        </ion-select>
+        <ion-button href="Home.html"  expand="full">Home</ion-button>
+        <ion-button href="Favourites.html"  expand="full">Favourites list</ion-button>
       </ion-item>
     </ion-toolbar>
     <ion-card-title id="showname"></ion-card-title>
     <ion-card>
-        <ion-select id="select-output" placeholder="select show"></ion-select>
         <ion-item><ion-img id="img-display" src="./God.jfif" style="width:550px;height:300px;" /></ion-item>
+    
+        <ion-card-content>
+      <p>Here some shizzzzz</p>
+      <input type="text" id="search_term"><br>
+      <p id="error_msg"></p><br>
+      <input type="button" id="search_button" value="SEARCH">
+      <ion-list>
+        <ion-item-slideing>
+        <ion-item>
+      <p id="search_found"></p>
     </ion-item>
-    <ion-card-content>
-<h2>Description</h2>
-<ion-list id="list-output"></ion-list>
+      <ion-item-options side="end">
+        <ion-item-option onClick="unread(item)">Unread</ion-item-option>
+      </ion-item-options>
+  </ion-item-slideing>
+    </ion-list>
 </ion-card-content>
+
 <ion-item>
 <ion-button>favourite</ion-button>
 <ion-button>Personnal Rateing</ion-button>
