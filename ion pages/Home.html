@@ -12,114 +12,112 @@ src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js">
 </script>
 <link rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+<script src="dark.js" type="application/javascript"></script>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<ion-app>
-    <ion-header>
-    <ion-toolbar color="primary">
-    <ion-title">
-        <ion-avatar>
-            <img src="./Profile1.jpeg" />
-          </ion-avatar>
-        </ion-title>
-    <ion-item>
-        <ion-label>Navigation</ion-label>
-        <ion-select value="" ok-text="Okay" cancel-text="Dismiss">
-          <ion-select-option  value="brown">Search<a href="Search.html"a></ion-select-option>
-          <ion-select-option value="blonde">About</ion-select-option>
-        </ion-select>
-      </ion-item>
+<style>
+  body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+  }
+  
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  </style>
+
+<ion-app >
+    <ion-header >
+      <ion-toolbar class="colour_mode_change"  color="primary">
+    <ion-title text-align="center">
+    Show Aid
+    </ion-title>
     </ion-toolbar>
-    <ion-card>
+    <ion-item class="colour_mode_change">
+        <ion-icon slot="start" name="moon"></ion-icon>
+        <ion-toggle slot="start" onclick="myFunction()"></ion-toggle>
+        <ion-button slot="end" href="Search.html"  expand="full" class="colour_mode_change">Search</ion-button>
+        <ion-button slot="end" href="Favourites.html"  expand="full" class="colour_mode_change"></i>Favourites list</ion-button>
+      </ion-item>
+    <ion-card class="colour_mode_change">
+        <ion-card-header>
+            <ion-card-title text-align="center"><h1 font-size= "70px" class="colour_mode_change">Show Buddie</h1></ion-card-title>
+          <ion-card-subtitle class="colour_mode_change">your best freind in the world for shows</ion-card-subtitle>
         </ion-card-header>
-        <ion-title>
-            News Feed
-        </ion-title>
-        <ion-card-content>
-            <ion-list>
-                <ion-item>
-                      <img src="Xbox.jpg" style="width:60px;height:80px;" />
-                    <ion-label>
-                      <h2>Xbox is Booming!</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit sit amet dolor vel mollis. 
-                        Nulla venenatis iaculis augue eu congue. Donec nec iaculis sapien. Mauris luctus sagittis nibh, lacinia
-                         tincidunt lectus pretium ac. Nam vehicula porttitor erat, ut convallis ante feugiat et.</p>
-                    </ion-label>
-                  </ion-item>
-                  <ion-item>
-                    <img src="Xbox.jpg" style="width:60px;height:80px;" />
-                  <ion-label>
-                    <h2>Xbox is Booming!</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit sit amet dolor vel mollis. 
-                      Nulla venenatis iaculis augue eu congue. Donec nec iaculis sapien. Mauris luctus sagittis nibh, lacinia
-                       tincidunt lectus pretium ac. Nam vehicula porttitor erat, ut convallis ante feugiat et.</p>
-                  </ion-label>
-                </ion-item>
-                <ion-item>
-                    <img src="Xbox.jpg" style="width:60px;height:80px;" />
-                  <ion-label>
-                    <h2>Xbox is Booming!</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit sit amet dolor vel mollis. 
-                      Nulla venenatis iaculis augue eu congue. Donec nec iaculis sapien. Mauris luctus sagittis nibh, lacinia
-                       tincidunt lectus pretium ac. Nam vehicula porttitor erat, ut convallis ante feugiat et.</p>
-                  </ion-label>
-                </ion-item>
-                <ion-item>
-                    <img src="Xbox.jpg" style="width:60px;height:80px;" />
-                  <ion-label>
-                    <h2>Xbox is Booming!</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit sit amet dolor vel mollis. 
-                      Nulla venenatis iaculis augue eu congue. Donec nec iaculis sapien. Mauris luctus sagittis nibh, lacinia
-                       tincidunt lectus pretium ac. Nam vehicula porttitor erat, ut convallis ante feugiat et.</p>
-                  </ion-label>
-                </ion-item>
-                <ion-item>
-                    <img src="Xbox.jpg" style="width:60px;height:80px;" />
-                  <ion-label>
-                    <h2>Xbox is Booming!</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit sit amet dolor vel mollis. 
-                      Nulla venenatis iaculis augue eu congue. Donec nec iaculis sapien. Mauris luctus sagittis nibh, lacinia
-                       tincidunt lectus pretium ac. Nam vehicula porttitor erat, ut convallis ante feugiat et.</p>
-                  </ion-label>
-                </ion-item>
-                <ion-item>
-                    <img src="Xbox.jpg" style="width:60px;height:80px;" />
-                  <ion-label>
-                    <h2>Xbox is Booming!</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit sit amet dolor vel mollis. 
-                      Nulla venenatis iaculis augue eu congue. Donec nec iaculis sapien. Mauris luctus sagittis nibh, lacinia
-                       tincidunt lectus pretium ac. Nam vehicula porttitor erat, ut convallis ante feugiat et.</p>
-                  </ion-label>
-                </ion-item>
-                <ion-item>
-                    <img src="Xbox.jpg" style="width:60px;height:80px;" />
-                  <ion-label>
-                    <h2>Xbox is Booming!</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit sit amet dolor vel mollis. 
-                      Nulla venenatis iaculis augue eu congue. Donec nec iaculis sapien. Mauris luctus sagittis nibh, lacinia
-                       tincidunt lectus pretium ac. Nam vehicula porttitor erat, ut convallis ante feugiat et.</p>
-                  </ion-label>
-                </ion-item>
-                <ion-item>
-                    <img src="Xbox.jpg" style="width:60px;height:80px;" />
-                  <ion-label>
-                    <h2>Xbox is Booming!</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit sit amet dolor vel mollis. 
-                      Nulla venenatis iaculis augue eu congue. Donec nec iaculis sapien. Mauris luctus sagittis nibh, lacinia
-                       tincidunt lectus pretium ac. Nam vehicula porttitor erat, ut convallis ante feugiat et.</p>
-                  </ion-label>
-                </ion-item>
-              </ion-list>
-        </ion-card>
-        <ion-card>
+        <ion-card class="colour_mode_change">
+          <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="Logo2.PNG" style="width:600px; height: 520px">
+              <div class="text">Welcome!</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="Saul.jpg" style="width:600px; height: 520px">
+              <div class="text">Better Call Saul</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="Stranger.jpg" style="width:600px; height: 520px">
+              <div class="text">Stranger Things</div>
+            </div>
+            
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>
         </ion-card>
        
     </ion-header>
-    ...
+    <ion-toolbar color="light">
+      <a href="https://www.instagram.com">
+      <img src="Insta.png" alt="https://www.instagram.com" width="40" height="40">
+      </a>
+      <a href="https://www.facebook.com/">
+          <img src="facebook.png" alt="https://www.facebook.com" width="40" height="40">
+          </a>
+          <a href="https://twitter.com/">
+              <img src="twitter.png" alt="https://twitter.com/" width="40" height="40">
+              </a>
+<ion-title slot="end"> Our Socials!</ion-title>
+  </ion-toolbar>
 </ion-app>
-<script src="app.js"></script>
+
+
+<script>
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
 </head>
-<body>
-    
-</body>
+
 </html>

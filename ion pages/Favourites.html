@@ -1,56 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
-<script type="module"
-src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js">
-</script>
-<script nomodule
-src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js">
-</script>
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+    <link rel="stylesheet" href="stylesheet.css"/>
+    <script type="module"src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="db.js" type="application/javascript"></script>
+    <script src="javascript.js" type="application/javascript"></script>
+    <script src="dark.js" type="application/javascript"></script>
 
-</style>
-<ion-app>
-    <ion-header>
-    <ion-toolbar color="primary">
-    <ion-title text-align="center">
-    Game companion
-    </ion-title>
-    </ion-toolbar>
-    <ion-card>
-        <ion-card-header>
-            <ion-card-title text-align="center"><h1 font-size= "70px">Game Buddie</h1></ion-card-title>
-          <ion-card-subtitle>your best freind in the world of gameing</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-           Username
-        </ion-card-content>
-            <ion-card-content>
-                Password
-        </ion-card-content>
-        <ion-card-content>
-            not got an account? sign up <b>here</b>
-        </ion-card-content>
-        
-        </ion-card>
-        <ion-card>
-            <ion-button>Sign up</ion-button>
-           
-        </ion-card>
-        <ion-card>
-            <ion-item><img src="./Logo.jpeg" /></ion-item>
-        </ion-card>
-       
-    </ion-header>
-    ...
-</ion-app>
-<script src="app.js"></script>
+
 </head>
-<body>
+<style>
+    body {
+      padding: 25px;
+      background-color: white;
+      color: black;
+      font-size: 25px;
+    }
     
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+    </style>
+<body class="colour_mode_change">
+    <ion-app class="colour_mode_change" >
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>
+            <ion-avatar>
+              <img src="./Profile1.jpeg" />
+            </ion-avatar>
+          </ion-title>
+          <ion-item class="colour_mode_change">
+            <ion-icon slot="start" name="moon"></ion-icon>
+        <ion-toggle slot="start" onclick="myFunction()"></ion-toggle>
+        <ion-button slot="end" href="Search.html"  expand="full">Search</ion-button>
+            <ion-button slot="end" href="Home.html"  expand="full">Home</ion-button>
+            <ion-button slot="end" href="Favourites.html"  expand="full">Favourites list</ion-button>
+          </ion-item>
+        </ion-toolbar>
+      </ion-header>
+
+        <ion-card class="colour_mode_change" style="overflow-y: auto">
+            <ion-card-content class="colour_mode_change">
+              <p>Favourites</p>
+              <ion-list id="fav_list"></ion-list>
+            </ion-card-content>
+            <ion-toolbar color="light">
+                <a href="https://www.instagram.com">
+                <img src="Insta.png" alt="https://www.instagram.com" width="40" height="40">
+                </a>
+                <a href="https://www.facebook.com/">
+                    <img src="facebook.png" alt="https://www.facebook.com" width="40" height="40">
+                    </a>
+                    <a href="https://twitter.com/">
+                        <img src="twitter.png" alt="https://twitter.com/" width="40" height="40">
+                        </a>
+<ion-title slot="end"> Our Socials!</ion-title>
+            </ion-toolbar>
+              </ion-toolbar>
+       </ion-card>
+    </ion-app>
 </body>
 </html>
